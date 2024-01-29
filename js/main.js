@@ -13,12 +13,16 @@ const app = createApp({
         getEmail() {
             axios.get(endpoint).then((res) => {
                 const email = res.data.response
-                console.log(email)
+                this.emails.push(email)
             })
         }
     },
     created() {
-        this.getEmail()
+        for (let i = 0; i < 10; i++) {
+            this.getEmail()
+            
+        }
+        
     }
 
 
