@@ -17,27 +17,17 @@ const app = createApp({
             }
             return this.isLoading
         }
-        
     },
     methods: {
         getEmail() {
-            
-            axios.get(endpoint).then((res) => {
-                const email = res.data.response
-                this.emails.push(email)
-                
-            })
+            axios.get(endpoint).then((res) => {this.emails.push(res.data.response)})
         }
     },
     created() {
         this.isLoading = true;
-        for (let i = 0; i < 10; i++) {
-            this.getEmail()
-
-        }
+        for (let i = 0; i < 10; i++) {this.getEmail()}
         
     }
-
 
 })
 
