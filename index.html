@@ -20,7 +20,8 @@
     <div id="root">
 
         <div v-if="isLoading"><i class="fa-solid fa-spinner fa-spin fa-4x"></i></div>
-
+        
+        <!-- se mettevo il v-if v-else non mi entrava nella condizione delle email perchè non generava 10 email ma di meno perchè lo fermavo prima con il v-if -->
         <ul v-show="!isLoading">
             <li v-for="email in emails">{{email}}</li>
         </ul>

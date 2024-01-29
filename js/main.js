@@ -16,7 +16,7 @@ const app = createApp({
                 this.isLoading = false
             }
             return this.isLoading
-        }
+        } 
     },
     methods: {
         getEmail() {
