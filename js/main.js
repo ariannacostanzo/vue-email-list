@@ -15,9 +15,12 @@ const app = createApp({
         }
     },
     created() {
-        for (let i = 0; i < 10; i++) {this.getEmail()}
+        for (let i = 0; i < 10; i++) {
+            this.getEmail()
+        }
     }
 })
+
 app.mount('#root')
 
 
